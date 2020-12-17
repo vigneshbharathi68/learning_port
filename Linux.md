@@ -1,4 +1,6 @@
 # Linux Basics
+- [Linux all commands](http://cc.iiti.ac.in/docs/linuxcommands.pdf)
+- [Bash commands](https://ss64.com/bash/)
 
 ## some basics from Unix/Linux world first
 
