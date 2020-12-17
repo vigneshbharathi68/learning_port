@@ -1,4 +1,4 @@
-Is Python Useful?
+## Is Python Useful?
 
 - Python is easy to use, powerful, and versatile, making it a great choice for beginners and experts alike. Python’s readability makes it a great first programming language — it allows you to think like a programmer and not waste time with confusing syntax. For instance, look at the following code to print “hello world” in Java and Python.
 
@@ -15,7 +15,7 @@ PYTHON
     print("hello world)    
 
 
-Installation
+### Installation
 
 - And now you’ve run your first Python program as easy as that! If Python isn’t installed, it’s easy to [download and install](https://www.python.org/downloads/). Instead of focusing on how to get your code to even run, you’ll be able to focus on learning actual programming concepts. And once you have those tools under your belt, if you move on to other languages, you’ll be able to easily understand a given piece of code.
 
