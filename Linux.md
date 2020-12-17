@@ -37,6 +37,9 @@
 `Ctrl+Q` will unfreeze the terminal
 `Ctrl+A` moves cursor to the beginning of command line
 `Ctrl+E` moves cursor to the end of line  
+`Ctrl+Shift+T` New tab in terminator
+`Ctrl+Shift+C` copy the content in terminal
+`Ctrl+Shit+V` Paste the copied content to terminal
 
 
 
