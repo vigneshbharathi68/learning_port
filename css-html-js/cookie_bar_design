@@ -1,0 +1,81 @@
+       <div class="cookiebar__wrapper">
+	<div class="cookiebar-settings" id="_gdpr_settings">
+		<div class="cookiebar-settings__backdrop"></div>
+		<div class="cookiebar-settings__container">
+			<div class="cookiebar-settings__tabs" id="_gdpr_tabs">
+				<h1 class="cookiebar-settings__heading">Cookie settings</h1>
+				<div class="cookiebar-settings__tabs-scroller">
+
+									<div class="cookiebar-settings__tab is-open" data-consent="prefs">
+						<a href="#" class="cookiebar-settings__tab-toggle">
+							Saving user preferences on the domain							<span class="cookiebar-settings__tab-toggle-arrow"></span>
+						</a>
+						<div class="cookiebar-settings__tab-content">
+							<div class="cookiebar-settings__tab-scroller">
+								<h2 class="cookiebar-settings__consent-name">
+									Saving user preferences on the domain								</h2>
+								<input class="cookiebar__checkbox" id="cookiebar-consent-prefs" type="checkbox">
+								<label class="cookiebar__checkbox-label" for="cookiebar-consent-prefs">
+									<span>
+										Agree									</span>
+								</label>
+								<p class="cookiebar-settings__consent-description">
+									Personal data are used to increase user convenience by storing data about your settings, such as language, region, screen resolution, cookie consent and more.								</p>
+							</div>
+						</div>
+					</div>
+									<div class="cookiebar-settings__tab " data-consent="analyze">
+						<a href="#" class="cookiebar-settings__tab-toggle">
+							Statistics and analysis of user behaviour							<span class="cookiebar-settings__tab-toggle-arrow"></span>
+						</a>
+						<div class="cookiebar-settings__tab-content">
+							<div class="cookiebar-settings__tab-scroller">
+								<h2 class="cookiebar-settings__consent-name">
+									Statistics and analysis of user behaviour								</h2>
+								<input class="cookiebar__checkbox" id="cookiebar-consent-analyze" type="checkbox">
+								<label class="cookiebar__checkbox-label" for="cookiebar-consent-analyze">
+									<span>
+										Agree									</span>
+								</label>
+								<p class="cookiebar-settings__consent-description">
+									Personal data are used to create statistics, track and analyse user behaviour on various websites. Data may be used for creation of anonymized reports. The user may be looked up by certain combination of personal data stored in internal databases.								</p>
+							</div>
+						</div>
+					</div>
+									<div class="cookiebar-settings__tab " data-consent="social">
+						<a href="#" class="cookiebar-settings__tab-toggle">
+							Marketing of products and connecting with social networks							<span class="cookiebar-settings__tab-toggle-arrow"></span>
+						</a>
+						<div class="cookiebar-settings__tab-content">
+							<div class="cookiebar-settings__tab-scroller">
+								<h2 class="cookiebar-settings__consent-name">
+									Marketing of products and connecting with social networks								</h2>
+								<input class="cookiebar__checkbox" id="cookiebar-consent-social" type="checkbox">
+								<label class="cookiebar__checkbox-label" for="cookiebar-consent-social">
+									<span>
+										Agree									</span>
+								</label>
+								<p class="cookiebar-settings__consent-description">
+									Your personal data is used to inform you about products and services of ŠKODA&nbsp;AUTO and third parties, events, competitions, newsletters, advertisements, catalogues submissions. Some personal data is used to target the above messages. Your personal data is also used to ensure that websites are interconnected with social networks and that content can be shared through these networks.								</p>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+			<a href="#" class="cookiebar-settings__close cookiebar__btn-close" id="_gdpr_close-settings-button"></a>
+			<a href="#" class="cookiebar-settings__save cookiebar__btn cookiebar__btn--primary" id="_gdpr_save-settings-button">Save settings</a>
+		</div>
+	</div>
+	<div class="cookiebar" id="_gdpr_cookiebar">
+		<div class="cookiebar__container">
+			<p class="cookiebar__info">
+				This website uses cookies. More information on processing of your personal data through cookies and more information about your rights may be found in the <a href="/en/documents/cookies/" target="_blank" rel="noopener noreferrer">Information about processing of personal data through cookies and other web technologies</a>. You may grant your consent to processing of your personal data also for the purposes of storing user preferences across websites, user behaviour statistics and analysis and addressing with a&nbsp;product offering and linking to social networks.			</p>
+			<a href="#" class="cookiebar__close cookiebar__btn-close cookiebar__btn-close--gray" id="_gdpr_close-button"></a>
+			<div class="cookiebar__buttons">
+				<a href="#" class="cookiebar__btn cookiebar__btn--secondary" id="_gdpr_settings-toggle">Cookie settings</a>
+				<a href="#" class="cookiebar__btn cookiebar__btn--primary" id="_gdpr_submit-button">Agree</a>
+			</div>
+		</div>
+	</div>
+</div>

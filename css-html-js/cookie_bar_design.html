@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .cookiebar__wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-width: 320px;
+        height: 100%;
+        pointer-events: none;
+        z-index: 16777271;
+    }
+    .cookiebar {
+        width: 100%;
+        padding: 0 20px;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        background: #000;
+        color: #fff;
+        font-family: SKODA Next,Helvetica,Arial,sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 1.5;
+        -webkit-transition: all 1s ease;
+        transition: all 1s ease;
+        pointer-events: auto;
+        -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+    
+    .cookiebar.is-open {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+    
+    .cookiebar__container {
+        position: relative;
+        margin: 50px auto 20px;
+        width: 100%;
+        max-width: 1000px;
+    }
+    
+    .cookiebar__info {
+        margin-bottom: 20px;
+        color: #d5d4d4;
+    }
+    
+    .cookiebar__buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+    
+    .cookiebar__buttons>:not(:first-child) {
+        margin-left: 15px;
+    }
+    
+    .cookiebar__wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-width: 320px;
+        height: 100%;
+        pointer-events: none;
+        z-index: 16777271;
+    }
+    
+    .cookiebar-settings {
+        /*display: none;*/
+        pointer-events: auto;
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        color: #fff;
+    }
+    
+    .cookiebar-settings.is-open {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    
+    .cookiebar-settings__backdrop {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,.5);
+    }
+    
+    .cookiebar-settings__container {
+        background-color: #2b2b2b;
+        position: relative;
+        max-width: 1000px;
+        margin: auto;
+        height: 460px;
+        width: 100%;
+    }
+    
+    .cookiebar-settings__tabs {
+        position: relative;
+        height: 100%;
+        counter-reset: a;
+    }
+    
+    .cookiebar-settings__heading {
+        text-transform: uppercase;
+        font-size: 24px;
+        margin: 0;
+        padding: 45px 0 25px 20px;
+        font-weight: 700;
+        width: 300px;
+    }
+    
+    .cookiebar-settings__tab {
+        counter-increment: a;
+    }
+    
+    .cookiebar-settings__tab.is-open .cookiebar-settings__tab-toggle {
+        color: #fff!important;
+        font-weight: 700;
+    }
+    
+    a.cookiebar-settings__tab-toggle,a.cookiebar-settings__tab-toggle:active,a.cookiebar-settings__tab-toggle:visited {
+        color: #d5d4d4;
+    }
+    
+    .cookiebar-settings__tab-toggle {
+        display: block;
+        position: relative;
+        width: 300px;
+        padding: 20px;
+        padding-left: 40px;
+        font-size: 14px;
+        text-decoration: none;
+    }
+    
+    .cookiebar-settings__tab-toggle:before {
+        position: absolute;
+        left: 20px;
+        content: counter(a) ".";
+        display: inline-block;
+    }
+    
+    .cookiebar-settings__tab.is-open .cookiebar-settings__tab-content {
+        display: block;
+    }
+    
+    .cookiebar-settings__tab-content {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 300px;
+        right: 0;
+        bottom: 0;
+        background-color: #000;
+        padding: 60px 0 90px;
+        line-height: 1.5;
+    }
+    
+    .cookiebar-settings__tab-scroller {
+        height: 100%;
+        padding: 0 30px;
+        overflow: auto;
+    }
+    
+    .cookiebar-settings__tab-scroller p {
+        margin-bottom: 0;
+    }
+    
+    .cookiebar-settings__consent-name {
+        font-size: 24px;
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    
+    a.cookiebar__btn {
+        display: inline-block;
+        padding: 15px 32px;
+        border: 2px solid transparent;
+        border-radius: 23px;
+        color: #fff;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 11px;
+        line-height: 15px;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+    
+    .cookiebar__btn-close {
+        position: relative;
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+    
+    a.cookiebar__btn--secondary {
+        border-color: #fff;
+    }
+    
+    .cookiebar-settings__save {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .cookiebar__btn--primary {
+        background-color: #4ba82e;
+    }
+    
+    .cookiebar__btn-close:after,.cookiebar__btn-close:before {
+        content: "";
+        display: block;
+        position: relative;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        margin: -2px 0;
+        background: #fff;
+    }
+    
+    .cookiebar__btn-close:before {
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    
+    .cookiebar__btn-close:after {
+        -webkit-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+        transform: rotate(135deg);
+    }
+    
+    .cookiebar-settings__close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    
+    .cookiebar__checkbox {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+    
+    .cookiebar__checkbox-label {
+        position: relative;
+        cursor: pointer;
+        margin-left: 22px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    
+    .cookiebar__checkbox-label:before {
+        width: 14px;
+        height: 14px;
+        top: 1px;
+        left: -20px;
+        border: 2px solid #fff;
+        background: #fff;
+    }
+    
+    .cookiebar__checkbox-label:after,.cookiebar__checkbox-label:before {
+        position: absolute;
+        content: "";
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+    
+    .cookiebar__checkbox-label:after {
+        width: 10px;
+        height: 10px;
+        top: 3px;
+        left: -18px;
+        background: #000;
+    }
+    
+    .cookiebar__checkbox:checked+.cookiebar__checkbox-label:after {
+        background: #4ba82e;
+    }
+    
+    .cookiebar__close {
+        position: absolute;
+        top: -45px;
+        left: -12px;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+    }
+    
+    .cookiebar-settings__consent-name:before {
+        content: counter(a) ".";
+        display: inline-block;
+        padding-right: .2em;
+    }
+
+</style>
+<body>
+    <div class="cookiebar__wrapper">
+        <div class="cookiebar-settings">
+            
+        </div>
+    </div>
+    <!-- <div class="cookiebar__wrapper">
+        <div class="cookiebar-settings" id="_gdpr_settings">
+            <div class="cookiebar-settings__backdrop">    
+            </div>
+            <div class="cookiebar-settings__container">
+                <div class="cookiebar-settings__tabs" id="_gdpr_tabs">
+                    <h1 class="cookiebar-settings__heading">Cookie settings</h1>
+                    <div class="cookiebar-settings__tabs-scroller">
+    
+                        <div class="cookiebar-settings__tab is-open" data-consent="prefs">
+                            <a href="#" class="cookiebar-settings__tab-toggle">
+                                Saving user preferences on the domain
+                                <span class="cookiebar-settings__tab-toggle-arrow"></span>
+                            </a>
+                            <div class="cookiebar-settings__tab-content">
+                                <div class="cookiebar-settings__tab-scroller">
+                                    <h2 class="cookiebar-settings__consent-name">
+                                        Saving user preferences on the domain								</h2>
+                                    <input class="cookiebar__checkbox" id="cookiebar-consent-prefs" type="checkbox">
+                                    <label class="cookiebar__checkbox-label" for="cookiebar-consent-prefs">
+                                        <span>
+                                            Agree									</span>
+                                    </label>
+                                    <p class="cookiebar-settings__consent-description">
+                                        Personal data are used to increase user convenience by storing data about your settings, such as language, region, screen resolution, cookie consent and more.								</p>
+                                </div>
+                            </div>
+                        </div>
+                                        <div class="cookiebar-settings__tab " data-consent="analyze">
+                            <a href="#" class="cookiebar-settings__tab-toggle">
+                                Statistics and analysis of user behaviour							<span class="cookiebar-settings__tab-toggle-arrow"></span>
+                            </a>
+                            <div class="cookiebar-settings__tab-content">
+                                <div class="cookiebar-settings__tab-scroller">
+                                    <h2 class="cookiebar-settings__consent-name">
+                                        Statistics and analysis of user behaviour								</h2>
+                                    <input class="cookiebar__checkbox" id="cookiebar-consent-analyze" type="checkbox">
+                                    <label class="cookiebar__checkbox-label" for="cookiebar-consent-analyze">
+                                        <span>
+                                            Agree									</span>
+                                    </label>
+                                    <p class="cookiebar-settings__consent-description">
+                                        Personal data are used to create statistics, track and analyse user behaviour on various websites. Data may be used for creation of anonymized reports. The user may be looked up by certain combination of personal data stored in internal databases.								</p>
+                                </div>
+                            </div>
+                        </div>
+                                        <div class="cookiebar-settings__tab " data-consent="social">
+                            <a href="#" class="cookiebar-settings__tab-toggle">
+                                Marketing of products and connecting with social networks							<span class="cookiebar-settings__tab-toggle-arrow"></span>
+                            </a>
+                            <div class="cookiebar-settings__tab-content">
+                                <div class="cookiebar-settings__tab-scroller">
+                                    <h2 class="cookiebar-settings__consent-name">
+                                        Marketing of products and connecting with social networks								</h2>
+                                    <input class="cookiebar__checkbox" id="cookiebar-consent-social" type="checkbox">
+                                    <label class="cookiebar__checkbox-label" for="cookiebar-consent-social">
+                                        <span>
+                                            Agree									</span>
+                                    </label>
+                                    <p class="cookiebar-settings__consent-description">
+                                        Your personal data is used to inform you about products and services of ŠKODA&nbsp;AUTO and third parties, events, competitions, newsletters, advertisements, catalogues submissions. Some personal data is used to target the above messages. Your personal data is also used to ensure that websites are interconnected with social networks and that content can be shared through these networks.								</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+                <a href="#" class="cookiebar-settings__close cookiebar__btn-close" id="_gdpr_close-settings-button"></a>
+                <a href="#" class="cookiebar-settings__save cookiebar__btn cookiebar__btn--primary" id="_gdpr_save-settings-button">Save settings</a>
+            </div>
+        </div>
+        <div class="cookiebar">
+            <div class="cookiebar__container">
+                <p class="cookiebar__info">
+                    This website uses cookies. More information on processing of your personal data through cookies and more information about your rights may be found in the <a href="/en/documents/cookies/" target="_blank" rel="noopener noreferrer">Information about processing of personal data through cookies and other web technologies</a>. You may grant your consent to processing of your personal data also for the purposes of storing user preferences across websites, user behaviour statistics and analysis and addressing with a&nbsp;product offering and linking to social networks.			</p>
+                <a href="#" class="cookiebar__close cookiebar__btn-close cookiebar__btn-close--gray" id="_gdpr_close-button"></a>
+                <div class="cookiebar__buttons">
+                    <a href="#" class="cookiebar__btn cookiebar__btn--secondary" id="_gdpr_settings-toggle">Cookie settings</a>
+                    <a href="#" class="cookiebar__btn cookiebar__btn--primary" id="_gdpr_submit-button">Agree</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</body>
+</html>
