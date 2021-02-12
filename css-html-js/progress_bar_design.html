@@ -39,10 +39,10 @@
       }
       
       #checkout-progress {
-        width: 90%;
+        width: 60%;
         margin: 0px auto;
         font-size: 2.5em;
-        font-weight: 900;
+        font-weight: 500;
         position: relative;
       }
       @media (max-width: 767px) {
@@ -91,11 +91,11 @@
         justify-content: space-between;
         align-items: center;
       }
-      #checkout-progress .progress-bar .step {
+      #checkout-progress .progress-bar .progress-step  {
         z-index: 2;
         position: relative;
       }
-      #checkout-progress .progress-bar .step .step-label {
+      #checkout-progress .progress-bar .progress-step .step-label {
         position: absolute;
         top: calc(100% + 25px);
         left: 50%;
@@ -111,13 +111,13 @@
           top: calc(100% + 15px);
         }
       }
-      #checkout-progress .progress-bar .step span {
+      #checkout-progress .progress-bar .progress-step span {
         color: #ccc;
         transition: 0.3s ease;
         display: block;
         transform: translate3d(0, 0, 0) scale(1) perspective(1000px);
       }
-      #checkout-progress .progress-bar .step .fa-check {
+      #checkout-progress .progress-bar .progress-step .fa-check {
         color: #fff;
         position: absolute;
         left: 50%;
@@ -125,20 +125,20 @@
         transition: transform 0.3s ease;
         transform: translate3d(-50%, -50%, 0) scale(0) perspective(1000px);
       }
-      #checkout-progress .progress-bar .step.active span, #checkout-progress .progress-bar .step.active .step-label {
+      #checkout-progress .progress-bar .progress-step.active span, #checkout-progress .progress-bar .progress-step.active .progress-step-label {
         color: #2C3E50;
       }
-      #checkout-progress .progress-bar .step.valid .fa-check {
+      #checkout-progress .progress-bar .progress-step.valid .fa-check {
         transform: translate3d(-50%, -50%, 0) scale(1) perspective(1000px);
       }
-      #checkout-progress .progress-bar .step.valid span {
+      #checkout-progress .progress-bar .progress-step.valid span {
         color: #2C3E50;
         transform: translate3d(0, 0, 0) scale(2) perspective(1000px);
       }
-      #checkout-progress .progress-bar .step.valid .step-label {
+      #checkout-progress .progress-bar .progress-step.valid .step-label {
         color: #2C3E50 !important;
       }
-      #checkout-progress .progress-bar .step:after {
+      #checkout-progress .progress-bar .progress-step:after {
         content: "";
         position: absolute;
         z-index: -1;
@@ -153,15 +153,15 @@
         transition: 0.3s ease;
       }
       @media (max-width: 767px) {
-        #checkout-progress .progress-bar .step:after {
+        #checkout-progress .progress-bar .progress-step:after {
           width: 40px;
           height: 40px;
         }
       }
-      #checkout-progress .progress-bar .step.active:after {
+      #checkout-progress .progress-bar .progress-step.active:after {
         border: 5px solid #2C3E50;
       }
-      #checkout-progress .progress-bar .step.valid:after {
+      #checkout-progress .progress-bar .progress-step.valid:after {
         background-color: #2C3E50;
         border: 5px solid #2C3E50;
       }
@@ -200,37 +200,37 @@
 </style>
 <body>
 
-<h1 class="title"> Checkout progress bar</h1>
+<h1 class="title"> Bot config bar</h1>
 <div class="step-1" id="checkout-progress" data-current-step="1">
   <div class="progress-bar">
-    <div class="step step-1 active"><span> 1</span>
+    <div class="progress-step step-1 active"><span> 1</span>
       <div class="fa fa-check opaque"></div>
-      <div class="step-label"> address</div>
+      <div class="step-label"> Assign a Bot</div>
     </div>
-    <div class="step step-2"><span> 2</span>
+    <div class="progress-step step-2"><span> 2</span>
       <div class="fa fa-check opaque"></div>
-      <div class="step-label"> shipping</div>
+      <div class="step-label"> Give Keywords</div>
     </div>
-    <div class="step step-3"><span> 3</span>
+    <div class="progress-step step-3" style="left: 50%;"><span> 3</span>
       <div class="fa fa-check opaque"></div>
-      <div class="step-label"> payment</div>
+      <div class="step-label"> Give us what you want me to prefer</div>
     </div>
   </div>
 </div>
 <div class="button-container">
-  <div class="btn btn-prev disabled"> previous step</div>
-  <div class="btn btn-next"> next step</div>
+  <div class="btn btn-prev-progress disabled"> previous step</div>
+  <div class="btn btn-next-progress"> next step</div>
 </div>
     
 </body>
 <script>
-    $(".btn-next").on("click", function () {
+    $(".btn-next-progress").on("click", function () {
         var currentStepNum = $("#checkout-progress").data("current-step");
         var nextStepNum = currentStepNum + 1;
-        var currentStep = $(".step.step-" + currentStepNum);
-        var nextStep = $(".step.step-" + nextStepNum);
+        var currentStep = $(".progress-step.step-" + currentStepNum);
+        var nextStep = $(".progress-step.step-" + nextStepNum);
         var progressBar = $("#checkout-progress");
-        $(".btn-prev").removeClass("disabled");
+        $(".btn-prev-progress").removeClass("disabled");
         if (currentStepNum == 5) {
             return false;
         }
@@ -252,13 +252,13 @@
             .data("current-step", nextStepNum);
     });
     
-    $(".btn-prev").on("click", function () {
+    $(".btn-prev-progress").on("click", function () {
         var currentStepNum = $("#checkout-progress").data("current-step");
         var prevStepNum = currentStepNum - 1;
-        var currentStep = $(".step.step-" + currentStepNum);
-        var prevStep = $(".step.step-" + prevStepNum);
+        var currentStep = $(".progress-step.step-" + currentStepNum);
+        var prevStep = $(".progress-step.step-" + prevStepNum);
         var progressBar = $("#checkout-progress");
-        $(".btn-next").removeClass("disabled");
+        $(".btn-next-progress").removeClass("disabled");
         if (currentStepNum == 1) {
             return false;
         }
