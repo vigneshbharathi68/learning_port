@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container" style="height: 100px;">
+
+    </div>
+ <div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col">
+            <div class="input-group mb-3">
+                <input id="input_number" type="text" class="form-control" placeholder="Enter how many terms do you want for fibonacci series" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-secondary" type="button" onclick="get()" id="button-addon2">Get</button>
+            </div>
+        </div>
+    </div>
+    <div  class="row d-flex justify-content-center">
+
+        <div class="card">
+            <div class="card-body">
+              <p id="output"></p>
+            </div>
+        </div>
+    </div>
+
+ </div>
+</body>
+</html>
+<script>
+function get(){
+  let x = document.getElementById("input_number").value;
+  const number = parseInt(x);
+  let n1 = 0, n2 = 1, nextTerm;
+  var fibo = new Array();
+  if (number <= 0){
+      alert("Enter valid number");
+      
+  }else if (number==1){
+      console.log('Fibonacci Series:');
+      console.log(n1); // print 0
+  }else {
+      console.log('Fibonacci Series:');
+      for (let i = 1; i <= number; i++) {
+        fibo.push(n1);
+        document.getElementById("output").innerText = fibo;
+        nextTerm = n1 + n2;
+        n1 = n2;
+        n2 = nextTerm;
+    }
+  }
+}
+</script>
