@@ -1,4 +1,4 @@
-# Learning port
+# Learning port:
 
 ## Tech Universe (With the Order of Preference)
 
@@ -22,7 +22,7 @@
 - Production CentOS
 - Docker/Podman
 
-## Dev Tools
+### Dev Tools
 
 - Terminator (Alternative to default Linux terminal)
     ```sh
