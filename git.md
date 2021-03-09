@@ -65,7 +65,7 @@ There are a couple of ways to download the source code, but mostly I prefer the 
 git clone <https://name-of-the-repository-link>
 
 example:
-git clone https://gitlab.com/chadura/zb/onboard.git
+git clone https://github.com/vigneshbharathi68/learning_port
 ```
 
 For example, if we want to download a project from Github, all we need to do is click on the green button (clone or download), copy the URL in the box and paste it after the git clone command that I've shown right above.
