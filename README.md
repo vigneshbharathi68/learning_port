@@ -48,5 +48,6 @@
  - Solr
  - Nginx
  - Google Drive
-## other stuff's
- - Full stack developing books[https://flaviocopes.com/page/list-subscribed/?ref=css-book]
+ 
+## Other stuff's
+ - Full stack developing books [Link here](https://flaviocopes.com/page/list-subscribed/?ref=css-book)
