@@ -60,5 +60,10 @@
 ## Web Development
 - [ ] Django
 
+## Other usefull tutorial stuff's
+- [Learn Python3](https://github.com/jerry-git/learn-python3)
+- [Learn python basics](https://github.com/trekhleb/learn-python)
+- [Python Programming Excersizes](https://github.com/zhiwehu/Python-programming-exercises)
 
 Tasks will be added and the stages will be continued....
+
