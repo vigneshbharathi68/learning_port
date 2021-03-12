@@ -64,6 +64,7 @@
 - [Learn Python3](https://github.com/jerry-git/learn-python3)
 - [Learn python basics](https://github.com/trekhleb/learn-python)
 - [Python Programming Excersizes](https://github.com/zhiwehu/Python-programming-exercises)
+- [Blogs for best github repo's](https://towardsdatascience.com/top-11-github-repositories-to-learn-python-e75e8676757a)
 
 Tasks will be added and the stages will be continued....
 
