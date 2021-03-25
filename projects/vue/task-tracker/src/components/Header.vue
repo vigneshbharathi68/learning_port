@@ -14,8 +14,8 @@ export default {
     props: {
         title: {
             type: String,
-            default: 'asdlkjfh',
-            }
+            default: 'Task Tracker',
+        }
     },
     components: { 
       Button
@@ -26,8 +26,8 @@ export default {
 <style scoped>
 header {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    /* align-items: left; */
     margin-bottom: 20px;
 }
 </style>
