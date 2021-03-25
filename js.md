@@ -1,4 +1,4 @@
-# Javascript a walkthrough
+# Javascript
 
 ## JavaScript Object Methods
 ### The this Keyword
@@ -15,4 +15,10 @@
                       return this.firstName + " " + this.lastName;
                     }
                 };
+```
+Accesing object using the below code 
+```
+            var name = person.fullName();
+            output as follows :
+                        John Doe
 ```
