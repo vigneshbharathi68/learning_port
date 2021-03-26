@@ -26,5 +26,9 @@ We're in a golden era of JavaScript libraries and frameworks. More and more comp
 | ------ | ------ |
 | Vue JS Crash Course 2021 | https://www.youtube.com/watch?v=qZXt1Aom3Cs |
 
+## Projects
+- Task Tracker [click to redirect the project directory](https://github.com/vigneshbharathi68/learning_port/tree/main/projects/vue/task-tracker)
+- Random User Generator [click to redirect the project directory](https://github.com/vigneshbharathi68/learning_port/tree/main/projects/vue/random-user-gen)
+
 ## Methods and important notes to learn
 [![Vue js flow](https://v3.vuejs.org/images/lifecycle.svg?__WB_REVISION__=f4a90248bd51e5ee6261fd079b5dffb5)](https://v3.vuejs.org/guide/instance.html#lifecycle-diagram)https://v3.vuejs.org/guide/instance.html#lifecycle-diagram
