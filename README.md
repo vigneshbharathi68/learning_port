@@ -10,6 +10,7 @@
 - JavaScript [get started](js.md)
 - Rust [Ready to dive in ??](rust.md)
 - PostgreSQL [start here](db.md)
+- Vue [start here](vue.md)
 
 ## Environment (Prefereble but not restricted)
 
