@@ -8,7 +8,11 @@
 | Opensource and First release feb 2014 | Light Weight | Familiarity of ES6+ features and syntax
 | Web application development  | MVC framework | Node.js and npm (or yarn) installed globally
 | Current release version-3.0.0 | Pure Javascript | Familiarity with REST APIs would be helpful, but we'll go over it.
-
+## Difference between react and vue
+| Vue | React |
+| ----- | ----- |
+| Component loader fast | It's slow when comparing to vue |
+| Template based (html, css, js) so, Its easy to understand | ut react.js handlig object so difficult to understand |
 ### installation
 - For prototyping or learning purposes, you can use the latest version with:
  ```sh
