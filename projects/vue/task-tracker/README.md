@@ -1,4 +1,4 @@
-# crash-2021
+# Task Trakcer app
 
 ## Project setup
 ```
