@@ -32,3 +32,69 @@ We're in a golden era of JavaScript libraries and frameworks. More and more comp
 
 ## Methods and important notes to learn
 [![Vue js flow](https://v3.vuejs.org/images/lifecycle.svg?__WB_REVISION__=f4a90248bd51e5ee6261fd079b5dffb5)](https://v3.vuejs.org/guide/instance.html#lifecycle-diagram)https://v3.vuejs.org/guide/instance.html#lifecycle-diagram
+
+### <Template>
+ - <form ```@submit="onSubmit"```></form>
+ - <div ```@dblclick="$emit('toggle-reminder', task.id)"``` ```:class="[task.reminder ? 'reminder': 'reminder_none', 'task']"```>
+ - <i ```@click="$emit('delete-task', task.id)"``` class="fas fa-times"></i>
+ - 
+```
+//Components should import before use
+import Header from './components/Header'
+import Tasks from './components/Tasks'
+
+//This is the structre we will be using in vue script tag
+export default { 
+  name: 'App',
+  //Imported components should be in this component
+  components: {
+    Header,
+    Tasks
+  },
+  //This is where we get the data to template
+  data(){
+    return {
+    //Here I am getting data from created() in methods
+      tasks: []
+    }
+  },
+  //It's nothing but a function 
+  //which we are going to make some function to get the data to template
+  methods: {
+    deleteTask(id) {
+      if (confirm('Are you sure?')){
+        this.tasks = this.tasks.filter((task) => task.id 
+        !== id)
+      }
+    },
+    toggleReminder(id){
+      this.tasks = this.tasks.map((task) => task.id === id ? {... task, reminder: !task.reminder} : task)
+    }
+  },
+  //I have hard coded data and pushed it to data() task array.
+  created() {
+    this.tasks = [
+      {
+        id: 1,
+        text: 'Doctor Appoinment',
+        day: 'March 1st at 2:30 pm',
+        reminder: true,
+      },
+      {
+        id: 2,
+        text: 'Meeting at school',
+        day: 'March 2nd at 10:00 am',
+        reminder: true,
+      },
+      {
+        id: 3,
+        text: 'Food shopping',
+        day: 'March 3rd at 11:00 am',
+        reminder: false,
+      }
+    ]
+  }
+}
+//There is lot more we should learn as of now I have took it while doing task tracker app.
+```
+
