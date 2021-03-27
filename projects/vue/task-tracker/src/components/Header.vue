@@ -1,7 +1,9 @@
 <template>
     <header>
         <h1>{{ title }}</h1>
-        <Button text="Add Task" color="green" />
+        <Button @btn-click="$emit('toggle-add-task')" 
+        :text="showAddTask ? 'Close' : 'Add Task'" 
+        :color="showAddTask ? 'red' : 'green'" />
         
     </header>
 </template>
@@ -15,7 +17,8 @@ export default {
         title: {
             type: String,
             default: 'Task Tracker',
-        }
+        },
+        showAddTask:Boolean,
     },
     components: { 
       Button
@@ -27,7 +30,7 @@ export default {
 header {
     display: flex;
     justify-content: left;
-    /* align-items: left; */
+    align-items: left;
     margin-bottom: 20px;
 }
 </style>
