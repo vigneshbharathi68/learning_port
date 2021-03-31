@@ -123,4 +123,22 @@ export default {
 - ``` <AddTask @add-task="addTask" /> ``` as we use this in ```App.vue``` it actually catches that emit and throw it to some function which we declare in methods shown below:
  ```addTask(task){ this.tasks = [...this.tasks, task] },```
 now its time to wrap that input form to the actual task array in ```data()``` section and it will show the value to under the value
-- 
+
+## How To Use an API with Vue.js
+#### What is Vue.js?
+- ue is a progressive framework for building user interfaces. 
+- It supports augmented rendering of the HTML markup through a template declaration bound to a data model.
+- When the data model is updated, the browser’s HTML DOM also changes accordingly.
+- Vuejs is a frontend-end [framework](https://rapidapi.com/blog/api-glossary/api-framework/), and hence it is implemented only in the view layer.
+
+#### Vue.js Components
+Each Vue.js project is composed of smaller components. These form the individual building blocks of the complete application and enable abstraction and code reuse.
+Here is an example of a Vue.js component.
+[![Components picture](https://rapidapi.com/blog/wp-content/uploads/2020/04/Sample-Vue-Component.png)]
+A Vue.js Component consists of 3 parts;
+- The HTML declaration
+- The component definition
+- The component style
+#### The HTML Declaration
+
+The HTML markup of the component is part of the HTML declaration. Usually, a  <template> tag defines it and contains one or more child tags.
