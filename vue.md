@@ -141,4 +141,24 @@ A Vue.js Component consists of 3 parts;
 - The component style
 #### The HTML Declaration
 
-The HTML markup of the component is part of the HTML declaration. Usually, a  <template> tag defines it and contains one or more child tags.
+The HTML markup of the component is part of the HTML declaration. Usually, a  ```<template>``` tag defines it and contains one or more child tags.
+#### The Component Definition
+Every Vue.js component has an Options object. It is a JSON object containing the following properties: 
+```MEDCPW``` which stands Acronyms of 
+```Methods``` | ```el``` | ```Data``` | ```Computed``` | ```Props``` | ```Watch```
+- ```el:``` This property contains the CSS selector of the DOM element, which is attached to the Vue component.
+- ```Data:``` The data defines an object that represents the internal data of the Vue component. It can also be a function that returns the data object.
+- ```Methods:``` The methods object contains a key-value pair of method names and their function definition
+for example,
+```
+    methods: {
+        created() : function (x, y){
+            return x*y;
+        }
+    }
+    
+```
+). These are part of the Vue component’s behavior which the other component can trigger.
+- ```computed:``` This contains an object which defines the getter and setter functions for computed properties of the Vue component. Computed properties affect a reactive update on the DOM whenever their value changes.   
+- ```props:``` This contains an array or object of properties specific to the Vue.js component, set at the time of invocation. 
+- ```watch:``` This object keeps track of changes in the value of any of the properties defined as part of ‘data‘ by setting up functions to watch over them.
