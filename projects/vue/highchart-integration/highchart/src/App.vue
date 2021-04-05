@@ -1,0 +1,35 @@
+<template>
+  <img alt="Vue logo" src="./assets/logo.png">
+  <Suspense>
+    <template #default>
+      <Users />
+    </template>
+    <template #fallback>
+      <div>content is Loading</div>
+    </template>
+  </Suspense>
+</template>
+
+<script>
+import Users from './components/Users.vue'
+import { Suspense } from 'vue';
+
+export default {
+  name: 'App',
+  components: {
+    Users,
+    Suspense,
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
