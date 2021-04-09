@@ -25,6 +25,8 @@ We're in a golden era of JavaScript libraries and frameworks. More and more comp
 | Name | Tutorials |
 | ------ | ------ |
 | Vue JS Crash Course 2021 | https://www.youtube.com/watch?v=qZXt1Aom3Cs |
+| Vue 3 basics explanation / cheatsheet | https://www.wrappixel.com/vue-cheet-sheet |
+| Little Intermediate tutorial | https://dev.to/adnanbabakan/vue-cheat-sheet-1-194a |
 
 ## Projects
 - Task Tracker [click to redirect the project directory](https://github.com/vigneshbharathi68/learning_port/tree/main/projects/vue/task-tracker)
