@@ -52,3 +52,10 @@
  
 ## Other stuff's
  - Full stack developing books [Link here](https://flaviocopes.com/page/list-subscribed/?ref=css-book)
+ - Data science pandas cheatsheet [Link here](https://towardsdatascience.com/my-python-pandas-cheat-sheet-746b11e44368)
+ - Javascript minimialized cheat sheet [Link here](https://websitesetup.org/wp-content/uploads/2020/09/Javascript-Cheat-Sheet.pdf)
+ - Wordpress cheat sheet[Link here](https://websitesetup.org/wordpress-cheat-sheet/)
+ - CSS cheat sheet [Link here](https://websitesetup.org/css3-cheat-sheet/)
+ - Bootstrap cheat sheet [Link here](https://websitesetup.org/bootstrap-cheat-sheet/)
+ - Website setup [Link here](https://websitesetup.org/)
+ - 
