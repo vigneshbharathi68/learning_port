@@ -1,4 +1,16 @@
 # Javascript
+
+## Tutorials
+
+| name | link |
+| ----- | ----- |
+| Full basics | https://javascript.info/ |
+
+## Cheatsheets
+| name | link/pdf here |
+|-----|-----|
+|  |  |
+
 ## JavaScript Object Methods
 ### The this Keyword
 - In a function definition, this refers to the "owner" of the function.
