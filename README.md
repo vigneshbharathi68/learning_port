@@ -34,6 +34,7 @@
 - [VS Code Editor](https://code.visualstudio.com/) (Preferred when using, JS, HTML, Node)
 - Jupyter Notebook / Colab for experiments/data flows
     ```sh
+    
     pip3 install jupyter --user
     ```
 - VIM good for remote Editor
@@ -58,4 +59,8 @@
  - CSS cheat sheet [Link here](https://websitesetup.org/css3-cheat-sheet/)
  - Bootstrap cheat sheet [Link here](https://websitesetup.org/bootstrap-cheat-sheet/)
  - Website setup [Link here](https://websitesetup.org/)
- - 
+
+| Tutorial name | description |
+| ----- | ----- |
+| [Fire ship](https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA) | Intermediate to advanced lessons about JavaScript, Flutter, Firebase, and modern app development. |
+|  |  |
