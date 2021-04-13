@@ -9,7 +9,7 @@
 ## Cheatsheets
 | name | link/pdf here |
 |-----|-----|
-|  |  |
+| Eloquent JS for learning basic | [link here](https://eloquentjavascript.net/) |
 
 ## JavaScript Object Methods
 ### The this Keyword
