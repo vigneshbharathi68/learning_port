@@ -5,6 +5,7 @@
 | name | link |
 | ----- | ----- |
 | Full basics | https://javascript.info/ |
+| Cheat Sheet with worked out | https://htmlcheatsheet.com/ |
 
 ## Cheatsheets
 | name | link/pdf here |
