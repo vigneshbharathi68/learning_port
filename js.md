@@ -4,8 +4,8 @@
 
 | name | link |
 | ----- | ----- |
-| Full basics | https://javascript.info/ |
-| Cheat Sheet with worked out | https://htmlcheatsheet.com/ |
+| Full basics | [link here](https://javascript.info/) |
+| Cheat Sheet with worked out | [link here](https://htmlcheatsheet.com/) |
 
 ## Cheatsheets
 | name | link/pdf here |
