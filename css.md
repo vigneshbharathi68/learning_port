@@ -32,6 +32,10 @@
 - [Image Compression](#image-compression)
 - [Chrome Extensions](#chrome-extensions)
 - [Others](#others)
+## Tailwind css
+| Name | Link |
+| ----- | ------ |
+| Tailwind cheatsheet | [Link here](https://tailwindcomponents.com/cheatsheet/) |
 
 ## UI Graphics
 
