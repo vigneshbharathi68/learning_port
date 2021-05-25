@@ -4,12 +4,13 @@
 
 | name | link |
 | ----- | ----- |
-| Full basics | https://javascript.info/ |
+| Full basics | [link here](https://javascript.info/) |
+| Cheat Sheet with worked out | [link here](https://htmlcheatsheet.com/) |
 
 ## Cheatsheets
 | name | link/pdf here |
 |-----|-----|
-|  |  |
+| Eloquent JS for learning basic | [link here](https://eloquentjavascript.net/) |
 
 ## JavaScript Object Methods
 ### The this Keyword
